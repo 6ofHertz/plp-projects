@@ -1,5 +1,6 @@
 [nix]
 channel = "stable-24_05"
+packages = ["cairo", "ffmpeg-full", "freetype", "ghostscript", "gobject-introspection", "gtk3", "pkg-config", "qhull", "tcl", "tk"]
 
 [workflows]
 runButton = "Run Analysis"
@@ -11,4 +12,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python analyze_sales.py"
+args = "python3 sales_data/analyze_sales.py"
