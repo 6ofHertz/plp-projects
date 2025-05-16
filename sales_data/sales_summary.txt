@@ -1,0 +1,6 @@
+Sales Analysis Report
+====================
+
+Total Revenue: $17,650.00
+Best-Selling Product: Mouse
+Highest Sales Day: 2024-01-01
