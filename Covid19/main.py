@@ -37,15 +37,15 @@ df_cleaned = df[df['location'].isin(focus_countries)].copy()
 
 # Handle missing values
 numeric_columns = ['total_cases', 'new_cases', 'total_deaths', 'new_deaths', 'total_vaccinations']
-df_cleaned[numeric_columns] = df_cleaned[numeric_columns].fillna(method='ffill')
+df_cleaned[numeric_columns] = df_cleaned[numeric_columns].ffill()
 
 # ============================
 # Step 3: Exploratory Data Analysis
 # ============================
 print("\n3️⃣ Performing EDA...")
 
-# Create visualization directory
-plt.style.use('seaborn')
+# Set plot style
+plt.style.use('default')
 
 # 1. Total Cases Over Time
 plt.figure(figsize=(12, 6))
