@@ -25,5 +25,14 @@ mode = "sequential"
 task = "shell.exec"
 args = "python Covid19/main.py"
 
+[[workflows.workflow]]
+name = "Interactive Dashboard"
+author = 29124309
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run Covid19/interactive_dashboard.py --server.address=0.0.0.0"
+
 [deployment]
 run = ["sh", "-c", "python analyze_sales.py"]
